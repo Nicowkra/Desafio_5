@@ -1,0 +1,16 @@
+html
+    head
+    title="Listado de productos"
+    body
+        if products
+       
+            h1 Listado de productos
+            a(href="./") 
+                button Cargar un producto nuevo
+            div 
+            each product in products 
+                img(src=product.thumbnail, alt=product.title)
+                h2 !{product.title}
+                p !{product.price}
+        else 
+            p No hay mas productos

@@ -1,0 +1,15 @@
+html
+    head
+        title Agregar un nuevo producto
+    body
+        h1 Carga de productos
+        form#productsForm(action="/" method="post") 
+            label.col Title
+            input.col(name='title' type='text')
+            label.col Price
+            input.col(name='price' type='number')
+            label.col URL Image
+            input.col(name='thumbnail' type='url')
+            input.btn(type='submit')
+        a(href="./products") 
+            button Ver listado de productos

@@ -1,0 +1,23 @@
+<head>
+    <meta charset="UTF-8">
+    <title>Listado de productos</title>
+</head>
+<body>
+    <h1>Listado de Productos</h1>
+<div>
+<a href="./">
+   <button>Cargar un producto nuevo</button>
+</a>
+ </div>
+    <% if (products) { %>
+        <% products.forEach(product => { %>
+                <img src="<%= product.thumbnail %> " alt="">
+                <h2><%= product.title  %> </h2>
+                <p><%= product.price  %> </p>
+        <% }) %>
+        <% } else { %>
+            <h1>No hay productos</h1>
+    <% } %>
+   
+</body>
+
